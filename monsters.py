@@ -45,4 +45,36 @@ class jelly_cube monster
 	polish_name="Galaretowaty sześcian"
 #class jelly_cube end;
 
-class 
+class witch monster
+	polish_name="czarownica"
+#class witch end;
+
+class nixie monster
+	#when fight agnist male can seduce and kill during sex, 
+	#so weak in normal fight
+	polish_name="rusałka"
+#class nixie end;
+
+class nymphs monster 
+	#work as nixie but strong in normal fight
+	polish_name="Wiła"
+#class nymphs end
+
+class gargoyle monster
+	# slow, weak but have great armor
+	polish_name="gargulec"
+#class gargoyle end;
+
+class dragon monster
+	# can attack with fire
+	polish_name="smok"
+#end class dragon
+
+class spider monster
+	polish_name="Pająk" # big one
+#end class spider
+
+class centaur monster
+	#never atack first, females can run command "Baw sie" to this monster and in 10% chance they were killed in 10% will be ill but in 80% they lost only 2HP and get sperm centarua item. 
+	polish_name="Centaur"
+#end class monster
