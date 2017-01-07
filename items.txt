@@ -1,0 +1,46 @@
+1.Compass (kompas)
+w 0.01 
+change description from left-right to NWSE 
+
+2. Altar (oltarzyk)
+w 1
+It lets heal the soul
+
+3. Ladder (Drabina)
+w 5  
+Allow to make bridge betwne 2 rooms, where no way and wall
+
+4.Medicines (medykamenty)
+w 0.1
+Allow to return some HP per one use, after use item is lost.
+
+5. 3m Pole (3m tyczka)
+w 4
+	Boost your trap finding skill
+
+6. rope (lina)
+w 3
+allows the same as the ladder, but with a higher risk of falling.
+Additionally allows hobble stunned monsters.
+
+7. Buzzwords (wytrychy)
+w 1
+allow you to try lockpiking the locks in game
+
+8.Lamp (lampa)
+w 2
+need oil to work
+
+9.torch (pochodnia)
+w 3
+As lamp gives you some light, but additionaly you can use it as wepon 
+10. mirror
+
+########
+well here i shoud put some wepon like knife,sword,stick,bow, crossbow, blunderbuss, etc.
+then some armor, etc.
+and magic items
+but i need first to think about mechanic 
+#######
+and here we need some magic stuff
+1.
