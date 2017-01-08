@@ -11,13 +11,20 @@ for call in notyfication:
 	print call['url']
 	print "id"
 	print call['entry']['id']
+	print 
+	if call['entry']['id'] not  in anserws.keys():
+		anserws[call['entry']['id']]=""
 	anserws[call['entry']['id']]+="Zawolales mnie @"
 	anserws[call['entry']['id']]+=call['author']
-	anserws[call['entry']['id']]+=" turaj to Ci odpowiadam, przeprasza jednoczesnie za spam\n"
+	anserws[call['entry']['id']]+=" tutaj to Ci odpowiadam, przeprasza jednoczesnie za spam\n powinno to byc ostatnie\n"
+	api.mark_as_read_notification(call['id'])
 
-for entry,anserw in anserws:
-	print anserw
-	print entry 
+
+for key in anserws.keys():
+	print key
+	print anserws[key]
+	api.add_entry_comment(key,anserws[key],"http://cdn.skim.gs/images/v1/msi/dc1h0q9jtxrqdqpwt6ai/tips-for-raising-a-healthy-and-happy-cat")
+
 	
 
 
