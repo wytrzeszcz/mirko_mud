@@ -2,7 +2,7 @@ import time
 import wykop
 import auth 
 import sys
-
+from random import randint
 init_done = False 
 while not init_done:
     try:
@@ -22,14 +22,22 @@ while True:
             print id_of_last_post
             voters= api.get_entry(id_of_last_post)["voters"]
             respond="rozliczenie tury:"
+            x=len(voters)-1;
+            x=randint(0,x)
+            i=0
             for vote in voters:
                 print "@"+vote["author"]
                 respond+="\n"
-                respond+="@"+vote["author"]+" :UMAR! bo nie ma tu jeszcze zadnej logiki, ale wiem ze zaplusowane dziekuje"
+                respond+="@"+vote["author"]
+                if(i!=x):
+                    respond+=" :UMAR! bo nie umie grac i ma myszke na kulke"
+                else:
+                    respond+=" :WYGRAL BO MA NAJWIEKSZY PIWNY BRZUCH"
+                i+=1
             api.add_entry_comment(id_of_last_post,respond)
 
-        tekst="Jestem bote, i nie bede tagowal bo zaraz nocna a @wytrzzeszcz sie denerwuje, w koncu on mnie pisze, jesli dobrze mnie zaprogramuje powinienem co 5 minut wrzucac ten wpis i wolac plusujacych porzedni do tego co zaplusowali, dzieluje za plusy one pomagaja wytrzowi pisac,elo z farszem"    
-        id_of_last_post=api.add_entry(body=tekst)["id"] # emged=
+        tekst="Na swojej drodze spoktales LAN-Party, aby zagrac z innymi we \"wstrzas\" daj plusa!\n zwyciezca tej smiertelnej bitwy moze byc tylko jeden!\n\nJest to wpis testowy dla zaprezentowania ideii #mudnamirko, opisy i ogolna logika bedzie oczywiscie lepsza\nmam nadzieje jednak ze wam sie podoba pomysl\n ! @wytrzzeszcz pilnuj "    
+        id_of_last_post=api.add_entry(body=tekst,embed="https://i.ytimg.com/vi/AuAHg5ZPadA/maxresdefault.jpg")["id"] # emged=
     except:
             print "Sky is a limit, but API has limit too2"
             print sys.exc_info()[0]
